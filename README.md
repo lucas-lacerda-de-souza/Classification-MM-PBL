@@ -13,8 +13,10 @@ Grad-CAM visualisation for image-based predictions and SHAP-based feature attrib
 ________________________________________
 **2. Pipeline**
 
-<img width="1475" height="1155" alt="Figure 2" src="https://github.com/user-attachments/assets/b98c33fa-c12d-4f0b-bd9e-1ac8d21db3f1" />
+<img width="2000" height="1155" alt="Figure 2" src="https://github.com/user-attachments/assets/b98c33fa-c12d-4f0b-bd9e-1ac8d21db3f1" />
+
 ________________________________________
+
 **3. Environment and Hardware**
 
 All experiments were performed using the following configuration:
@@ -209,7 +211,7 @@ ________________________________________
 
 **9. Run models and reproduce tables**
 
-<img width="1460" height="501" alt="image" src="https://github.com/user-attachments/assets/17771059-2f3e-40c5-ac3e-512e19a81e9f" />
+<img width="2000" height="501" alt="image" src="https://github.com/user-attachments/assets/17771059-2f3e-40c5-ac3e-512e19a81e9f" />
 
 ________________________________________
 
