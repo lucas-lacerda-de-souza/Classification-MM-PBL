@@ -245,13 +245,108 @@ ________________________________________
 
 **10. Installation**
 
-git clone https://github.com/lucas-lacerda-de-souza/Classification-DLBCL-ENKTCL-NT.git
-cd Classification-DLBCL-ENKTCL-NT
+git clone https://github.com/lucas-lacerda-de-souza/Classification-MM-PBL.git
+cd Classification-MM-PBL
+________________________________________
+
+**11. Quick Start Guide**
+
+**11.1. Clone the repository**
+
+git clone https://github.com/lucas-lacerda-de-souza/Classification-MM-PBL.git
+cd Classification-MM-PBL
+
+**11.2. Create and activate the environment**
+
+conda env create -f environment.yml
+conda activate mm-pbl-ai
+
+**11.3. Run inference**
+
+python inference.py --input_dir ./data/test/ --output_dir ./results/
+
+**11.4. Generate Grad-CAM heatmaps**
+
+python scripts/visualize_gradcam.py \
+  --model alexnet \
+  --input_dir ./data/test/ \
+  --output_dir ./gradcam/heatmaps/
+________________________________________
+
+**12. Compliance with TRIPOD-AI and CLAIM 2024 Guidelines**
+
+This repository has been structured to meet the TRIPOD-AI (Transparent Reporting of a multivariable prediction model for Individual Prognosis Or Diagnosis – 
+AI extension) and CLAIM 2024 (Checklist for Artificial Intelligence in Medical Imaging) requirements for transparent and reproducible AI in healthcare.
+
+**Data Source and Splits**
+
+Detailed in README.md → Dataset Organization and METHODS.md.
+Data divided into 80% training, 10% validation, and 10% testing.
+Two independent external validation cohorts used to assess generalizability.
+
+**Model Architecture and Training**
+
+Documented in /models and individual training scripts.
+Includes optimizer (AdamW), learning rate, batch size, epochs, and loss functions.
+
+**Performance Metrics**
+
+Internal and external validation results summarized in /results
+Cross-institutional evaluation demonstrates robustness to domain shifts.
+
+**Interpretability and Explainability**
+
+SHAP feature importance for XGBoost models and Grad-CAM heatmaps for CNNs included.
+Code and examples available in /models and /data.
+
+**Clinical and Biological Relevance**
+
+Described in MODEL_CARD.md → Intended Use.
+Designed to assist diagnostic workflows, not to replace expert evaluation.
+
+**Limitations and Potential Biases**
+
+Outlined in MODEL_CARD.
+Includes dataset size, center-specific staining differences, and potential bias from single-institution data predominance.
+
+**Ethical Considerations**
+
+Discussed in MODEL_CARD.md → Ethical and Practical Considerations.
+Model not intended for autonomous clinical use; human oversight required at all stages.
 
 ________________________________________
 
+**13. Ethics**
 
+This study was approved by the Ethics Committee of the Piracicaba Dental School, University of Campinas, Piracicaba, Brazil (protocol no. 67064422.9.1001.5418), 
+and by the West of Scotland Research Ethics Service (20/WS/0017). The study was performed according to the clinical standards of the 1975 and 1983 Declaration of Helsinki. 
+Written consent was not required as data was collected from surplus archived tissue. Data collected were fully anonymised.
 
+________________________________________
 
+**14. Data availability**
 
-  
+All the data derived from this study are included in the manuscript. We are unable to share the whole slide images and clinical data, due to restrictions in the 
+ethics applications. However, we created synthetic slides to show the structure of the project.
+
+________________________________________
+
+**15. Code availability**
+
+We have made the codes publicly available online, along with model weights (https://github.com/lucas-lacerda-de-souza/Classification-MM-PBL/tree/main). All code was written 
+with Python Python 3.12.11, along with PyTorch 2.8.0. The full implementation of the model, including the code and documentation, has been deposited in the Zenodo repository 
+and is publicly available (...). 
+
+________________________________________
+**16. Citation**
+
+@article{delasouza2025classification,
+  title={Machine Learning and Multimodal Deep Learning to Classify Plasmablastic Lymphoma from Multiple Myeloma},
+  author={Souza, Lucas Lacerda de, Chen, Zhiyang […] Khurram, Syed Ali and Vargas, Pablo Agustin},
+  journal={(oral oncology / 2026)},
+  year={2026}
+}
+________________________________________
+**17. License**
+
+MIT License © 2025 Lucas Lacerda de Souza
