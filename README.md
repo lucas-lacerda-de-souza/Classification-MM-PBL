@@ -143,87 +143,87 @@ data/
 
 patches/
 
- ├── gradcam/
- 
- │ ├── heatmaps/
- 
- │ │ └── heatmap.png files
- 
- │ └── patches/
- 
- │  └── patch.png files
+├── gradcam/
 
- │ └── wsi_heatmaps/
- 
- │  └── wsi.png files
- 
- ├── masks/
- 
- │ ├── train/
- 
- │ ├── val/
- 
- │ └── test/
- 
- │  └── mask.png files
- 
- └── patches/
- 
-  ├── train/
-  
-  ├── val/
-  
-  └── test/
-  
-   └── patch.png files
-   
- models/
+│   ├── heatmaps/
 
-├── AlexNet
+│   │   └── heatmap.png files
+
+│   ├── patches/
+
+│   │   └── patch.png files
+
+│   └── wsi_heatmaps/
+
+│       └── wsi.png files
+│
+├── masks/
+
+│   ├── train/
+
+│   ├── val/
+
+│   └── test/
+
+│       └── mask.png files
+│
+└── patches/
+
+    ├── train/
+    
+    ├── val/
+    
+    └── test/
+    
+        └── patch.png files
+
+
+models/
+
+├── AlexNet/
 
 │   ├── multimodal_alexnet_patch_level.py
 
 │   └── multimodal_alexnet_patient_level.py
 
 │
-├── ResNet50
+├── ResNet50/
 
 │   ├── multimodal_resnet50_patch_level.py
 
 │   └── multimodal_resnet50_patient_level.py
 
 │
-├── DenseNet121
+├── DenseNet121/
 
 │   ├── multimodal_densenet121_patch_level.py
 
 │   └── multimodal_densenet121_patient_level.py
 
 │
-├── InceptionV3
+├── InceptionV3/
 
 │   ├── multimodal_inceptionV3_patch_level.py
 
 │   └── multimodal_inceptionV3_patient_level.py
 
 │
-├── CellViT
+├── CellViT/
 
 │   ├── multimodal_cellvit_patch_level.py
 
 │   └── multimodal_cellvit_patient_level.py
 
 │
-├── XGBoost
+└── XGBoost/
 
-│   ├── xgboost_classification_cpc_mpa.R
-
-│   └── xgboost_classification_gradcam.R
-
+    ├── xgboost_classification_cpc_mpa.R
+    
+    └── xgboost_classification_gradcam.R
+    
 results/
 
- └── metrics
-
+└── metrics/
 ________________________________________
 
 **9. Run models and reproduce tables**
