@@ -173,7 +173,16 @@ patches/
 
 └── patches/
 
-    ├── train/
+│   ├── train/
+
+│   ├── val/
+
+│   └── test/
+
+│       └── patch.png files
+
+
+├── train/
 
     ├── val/
 
