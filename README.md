@@ -179,29 +179,46 @@ patches/
    
  models/
 
- ├── multimodal_alexnet_patch_level.py
- 
- ├── multimodal_alexnet_patient_level.py
- 
- ├── multimodal_resnet50_patch_level.py
- 
- ├── multimodal_resnet50_patient_level.py
- 
- ├── multimodal_densenet121_patch_level.py
- 
- ├── multimodal_densenet121_patient_level.py
- 
-   ├── multimodal_inceptionV3_patch_level.py
- 
- ├── multimodal_inceptionV3_patient_level.py
- 
- ├── multimodal_cellvit_patch_level.py
- 
- ├── multimodal_cellvit_patient_level.py
- 
- ├── xgboost_classification_cpc_mpa.R
- 
- └── xgboost_classification_gradcam.R
+├── AlexNet
+
+│   ├── multimodal_alexnet_patch_level.py
+
+│   └── multimodal_alexnet_patient_level.py
+
+│
+├── ResNet50
+
+│   ├── multimodal_resnet50_patch_level.py
+
+│   └── multimodal_resnet50_patient_level.py
+
+│
+├── DenseNet121
+
+│   ├── multimodal_densenet121_patch_level.py
+
+│   └── multimodal_densenet121_patient_level.py
+
+│
+├── InceptionV3
+
+│   ├── multimodal_inceptionV3_patch_level.py
+
+│   └── multimodal_inceptionV3_patient_level.py
+
+│
+├── CellViT
+
+│   ├── multimodal_cellvit_patch_level.py
+
+│   └── multimodal_cellvit_patient_level.py
+
+│
+├── XGBoost
+
+│   ├── xgboost_classification_cpc_mpa.R
+
+│   └── xgboost_classification_gradcam.R
 
 results/
 
