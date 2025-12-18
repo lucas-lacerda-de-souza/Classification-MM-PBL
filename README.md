@@ -166,7 +166,7 @@ patches/
 │   └── test/
 
 │       └── mask.png files
-│
+
 └── patches/
 
     ├── train/
