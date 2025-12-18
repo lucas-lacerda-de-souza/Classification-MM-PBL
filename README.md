@@ -191,11 +191,11 @@ patches/
  
  ├── multimodal_densenet121_patient_level.py
  
- ├── multimodal_inceptionV3_patch_level.py
+  ├── multimodal_inceptionV3_patch_level.py
  
  ├── multimodal_inceptionV3_patient_level.py
  
- ├── multimodal_cellvit_patch_level.py
+  ├── multimodal_cellvit_patch_level.py
  
  ├── multimodal_cellvit_patient_level.py
  
