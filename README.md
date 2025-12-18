@@ -181,23 +181,6 @@ patches/
 
 │       └── patch.png files
 
-
-├── train/
-
-    ├── val/
-
-    └── test/
-
-
-    ├── train/
-    
-    ├── val/
-    
-    └── test/
-    
-        └── patch.png files
-
-
 models/
 
 ├── AlexNet/
