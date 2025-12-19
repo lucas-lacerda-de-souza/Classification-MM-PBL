@@ -1,23 +1,17 @@
 📘 Model Categories
 1. Multimodal Deep Learning
-
 These scripts implement a multimodal deep learning framework that performs late fusion between CNN-based image features and clinicopathological + nuclear morphometric embeddings for patch-level and patient-level classification of Multiple Myeloma (MM) and Plasmablastic Lymphoma (PBL) of the head and neck.
 
 Supported CNN Architectures
-
 AlexNet
-
 ResNet50
-
 DenseNet121
-
 InceptionV3
-
 CellViT
 
 Scripts
-Script	Level	Description
-multimodal_alexnet_patch_level.py	Patch	AlexNet-based multimodal model for patch-level classification.
+Script	                                  │   Level	  │                               Description
+multimodal_alexnet_patch_level.py	      │   Patch	  │     AlexNet-based multimodal model for patch-level classification.
 multimodal_alexnet_patient_level.py	Patient	Patient-level AlexNet inference using mean aggregation of patch probabilities.
 multimodal_resnet50_patch_level.py	Patch	ResNet50 multimodal classifier integrating image patches and structured data.
 multimodal_resnet50_patient_level.py	Patient	Aggregated patient-level inference based on ResNet50 outputs.
