@@ -268,7 +268,6 @@ python inference.py --input_dir ./data/test/ --output_dir ./results/
 **11.4. Generate Grad-CAM heatmaps**
 
 python scripts/visualize_gradcam.py \
-  --model alexnet \
   --input_dir ./data/test/ \
   --output_dir ./gradcam/heatmaps/
 ________________________________________
