@@ -30,12 +30,12 @@ Site, Age (SHAP > 1.0)
 
 🧠 Multimodal Patch-Level Performance
 AlexNet
-Internal: Accuracy 0.78, F1 0.77, AUC 0.82 (95% CI: 0.76–0.88), Kappa 0.56
+Internal: Accuracy 0.78, F1 0.77, AUC 0.82, Kappa 0.56
 External 1: Accuracy 0.76, F1 0.75, AUC 0.80, Kappa 0.53
 External 2: Accuracy 0.74, F1 0.74, AUC 0.78, Kappa 0.50
 
 ResNet50
-Internal: Accuracy 0.93, F1 0.93, AUC 0.96 (95% CI: 0.92–0.99), Kappa 0.83
+Internal: Accuracy 0.93, F1 0.93, AUC 0.96, Kappa 0.83
 External 1: Accuracy 0.91, F1 0.91, AUC 0.94, Kappa 0.80
 External 2: Accuracy 0.90, F1 0.90, AUC 0.93, Kappa 0.77
 
