@@ -339,7 +339,7 @@ and is publicly available (...).
 ________________________________________
 **16. Citation**
 
-@article{delasouza2025classification,
+@article{delasouza2026classification,
   title={Machine Learning and Multimodal Deep Learning to Classify Plasmablastic Lymphoma from Multiple Myeloma},
   author={Souza, Lucas Lacerda de, Chen, Zhiyang […] Khurram, Syed Ali and Vargas, Pablo Agustin},
   journal={(oral oncology / 2026)},
