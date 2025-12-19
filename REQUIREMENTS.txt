@@ -1,0 +1,115 @@
+🖥️ System Requirements
+- Operating System
+Ubuntu 20.04.1 LTS (64-bit)
+Fully compatible with CUDA 12.8, PyTorch 2.8.0, multi-GPU training, and large-scale computational pathology workflows.
+
+- Programming Language
+Python 3.12.11
+
+- Core Deep Learning Frameworks
+PyTorch 2.8.0 (CUDA 12.8)
+TorchVision 0.19.0
+TorchAudio 2.8.0
+
+These libraries support:
+Multi-GPU training (DataParallel)
+Mixed-precision computation
+CNN- and transformer-based architectures
+Large-batch inference and Grad-CAM computation
+
+- Data Handling and Scientific Computing
+NumPy 1.26.4
+Pandas 2.2.3
+Scikit-learn 1.5.2
+OpenPyXL 3.1.5 (for structured clinical metadata in Excel format)
+
+- Visualization
+Matplotlib 3.9.2
+Seaborn 0.13.2
+
+Used for:
+ROC curves
+Calibration plots
+Confusion matrices
+Morphometric data visualization
+
+- Image Processing
+Pillow 10.4.0
+- Used for:
+Patch loading
+Image resizing
+RGB preprocessing of H&E images
+
+- Utilities
+tqdm 4.66.5
+Provides progress bars for training, inference, and Grad-CAM generation.
+
+- Model Interpretation and Explainability
+SHAP - Used for feature attribution in XGBoost and multimodal models.
+Grad-CAM - Implemented directly within this repository for CNN and CellViT explainability.
+
+- Conda Environment and Channels
+The project was developed using conda, with the following channels:
+pytorch
+nvidia
+defaults
+These channels ensure access to CUDA-enabled builds compatible with PyTorch 2.8.0 and multi-GPU execution.
+
+- Hardware Requirements
+- CPU
+Intel Xeon W-2295
+18 cores / 36 threads
+
+- Recommended for:
+Parallel patch extraction
+Morphometric analysis
+Grad-CAM post-processing
+
+- RAM
+125 GB
+Required for:
+Whole-slide image (WSI) handling
+Patch-level datasets
+Multimodal training pipelines
+Grad-CAM–guided nuclear analysis
+
+- GPU
+3 × NVIDIA GeForce RTX 3090 (24 GB VRAM each)
+Fully compatible with:
+Multi-GPU training
+CNN and transformer-based models (including CellViT)
+Grad-CAM heatmap generation
+Large-batch inference
+
+- Disk Space
+≥ 1 TB recommended
+Used for:
+Whole-slide images
+Patch datasets (299 × 299 pixels)
+Segmentation masks
+Logs, checkpoints, and model weights
+Grad-CAM outputs
+
+- Software Components
+Deep Learning Models
+AlexNet
+ResNet50
+DenseNet121
+InceptionV3
+CellViT (transformer-based)
+All models support multimodal fusion with structured clinical data.
+
+- Traditional Machine Learning
+XGBoost (via scikit-learn-compatible interface)
+Used for clinicopathological and morphometric feature modelling.
+
+- Data and Code Availability
+- Data
+Whole-slide images and clinical data cannot be publicly released due to ethical restrictions.
+Synthetic demo data and example patches are provided for testing and inference.
+
+- Code
+Full implementation available at: https://github.com/lucas-lacerda-de-souza/Classification-MM-PBL
+
+- Model Weights
+Trained models, segmentation weights, and multimodal checkpoints are publicly available via Zenodo (link provided in the repository).
