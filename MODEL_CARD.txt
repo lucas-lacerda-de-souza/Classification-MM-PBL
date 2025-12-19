@@ -1,0 +1,193 @@
+🧠 Model Card — Multimodal AI for Multiple Myeloma (MM) vs Plasmablastic Lymphoma (PBL)
+1. Model Overview
+This repository provides a comprehensive and explainable multimodal artificial intelligence framework developed to support the differential diagnosis between Multiple Myeloma (MM) and 
+Plasmablastic Lymphoma (PBL) using routine H&E-stained whole-slide images (WSIs) in combination with clinicopathological variables and nuclear morphometric features.
+MM and PBL represent a diagnostically challenging pair of plasma-cell neoplasms due to substantial overlap in morphology, plasmablastic differentiation, and high-grade cytological features, 
+particularly in small or fragmented biopsy specimens. The proposed system aims to reduce diagnostic ambiguity and interobserver variability by integrating complementary sources of information
+within a unified computational pipeline.
+
+- The multimodal system integrates:
+Deep learning patch-level classifiers
+AlexNet
+ResNet50
+DenseNet121
+InceptionV3
+CellViT (Vision Transformer–based architecture)
+
+- Nuclear morphometric analysis (area, perimeter, circularity, eccentricity, hematoxylin optical density)
+
+- Traditional machine learning
+XGBoost classifier for clinicopathological and morphometric feature selection
+
+- Multimodal late-fusion models
+Joint integration of CNN/Transformer embeddings with structured clinical variables
+
+- Explainability tools
+Grad-CAM for spatial interpretability
+SHAP for feature attribution and transparency
+
+The overarching goal is to develop an assistive diagnostic tool capable of supporting pathologists in the classification of MM and PBL, particularly in diagnostically equivocal cases.
+
+2. Data Used
+- Source and Composition
+Total cases: 62
+31 Multiple Myeloma (MM)
+31 Plasmablastic Lymphoma (PBL)
+
+- Anatomical focus: Head and neck region
+Data origin: Nine international centres across Brazil, Mexico, Guatemala, and the United Kingdom
+Time span: 2000–2024
+
+- Ethics approvals:
+University of Campinas (Brazil): Protocol no. 67064422.9.1001.5418
+West of Scotland Research Ethics Service: 20/WS/0017
+All diagnoses were confirmed according to the most recent WHO classification of haematolymphoid neoplasms and independently reviewed by three expert pathologists.
+
+- Image Acquisition and Preparation
+Scanning systems:
+Aperio CS Digital Pathology System (Leica Biosystems)
+Pannoramic 250 (3DHISTECH)
+Magnification: 40×
+Patch size: 299 × 299 pixels
+Patch overlap: 20%
+
+- Pre-processing Pipeline
+Manual ROI delineation to retain diagnostically relevant tissue
+Semantic segmentation to remove background and artefacts
+Macenko colour normalisation to mitigate inter-institutional staining variability
+Patient-level data splitting to prevent data leakage:
+Training: 80%
+Validation: 10%
+Test: 10%
+
+- Data Augmentation (Training Only)
+Rotations (90°, 180°, 270°)
+Gaussian blur
+Zoom (+20%)
+
+- Clinical & Morphometric Variables
+Extracted and evaluated variables included:
+Age
+Sex
+Anatomical site
+Nuclear area
+Nuclear perimeter
+Nuclear circularity
+Nuclear eccentricity
+Mean hematoxylin optical density
+
+Only variables demonstrating meaningful contribution in SHAP analysis were retained for multimodal integration.
+
+- External Validation
+Two independent external validation cohorts were used, consisting exclusively of cases from centres not included in the training phase.
+
+3. Model Performance Summary
+🧬 Morphometric Analysis
+Statistically significant differences between MM and PBL nuclei were observed:
+Lower nuclear circularity in MM: p = 0.0220
+Higher nuclear eccentricity in MM: p = 0.0255
+Trend towards larger nuclear area in MM: p = 0.0616
+No significant differences were found for:
+Nuclear perimeter: p = 0.8366
+Mean hematoxylin optical density: p = 0.2718
+These findings indicate increased nuclear elongation and morphological irregularity in MM compared with PBL.
+
+4. Results Summary
+🧬 Morphometric Analysis
+Nuclear circularity: significantly lower in MM (p = 0.0220)
+Nuclear eccentricity: significantly higher in MM (p = 0.0255)
+Nuclear area: trend toward larger values in MM (p = 0.0616)
+Nuclear perimeter: no significant difference (p = 0.8366)
+Mean hematoxylin optical density: no significant difference (p = 0.2718)
+
+🧮 XGBoost — Clinicopathological + Morphometric Data
+Accuracy: 0.789
+AUC: 0.920
+F1-score: 0.818
+Precision: 0.818
+Recall: 0.818
+Most influential features (SHAP)
+Anatomical site: 1.711
+Age: 1.095
+Nuclear circularity: 0.923
+Nuclear area: 0.705
+
+➡️ Only site and age were retained for multimodal integration.
+🧠 Patch-Level Deep Learning Performance
+AlexNet
+Internal accuracy: 0.78, AUC: 0.82
+External validation: accuracy 0.74–0.76, AUC 0.78–0.80
+
+ResNet50
+Internal accuracy: 0.93, AUC: 0.96
+External validation: accuracy 0.90–0.91, AUC 0.93–0.94
+
+DenseNet121
+Internal accuracy: 0.88, AUC: 0.91
+External validation: accuracy 0.84–0.86, AUC 0.87–0.89
+
+InceptionV3
+Internal accuracy: 0.89, AUC: 0.93
+External validation: accuracy 0.86–0.87, AUC 0.89–0.91
+
+CellViT
+Internal accuracy: 0.97, AUC: 0.97
+External validation: accuracy 0.94–0.95, AUC 0.93–0.94
+
+👩‍⚕️ Multimodal Patient-Level Performance
+AlexNet
+Internal accuracy: 0.76, AUC: 0.80
+External validation: accuracy 0.72–0.74
+
+ResNet50
+Internal accuracy: 0.93, AUC: 0.96
+External validation: accuracy 0.90–0.91
+
+DenseNet121
+Internal accuracy: 0.88, AUC: 0.90
+External validation: accuracy 0.84–0.86
+
+InceptionV3
+Internal accuracy: 0.89, AUC: 0.92
+External validation: accuracy 0.86–0.87
+
+CellViT
+Internal accuracy: 0.97, AUC: 0.97
+External validation: accuracy 0.94–0.95
+Best calibration: ECE 0.02–0.03, Brier 0.05–0.07
+
+🔍 Grad-CAM Explainability
+Training accuracy: 0.87, AUC: 0.96
+Internal validation accuracy: 0.65, AUC: 0.65
+External validation accuracy: 0.84, AUC: 0.97
+
+👨‍⚕️ Pathologists’ Performance
+Pathologist 1: accuracy 82.3%, MCC 0.654
+Pathologist 2: accuracy 72.6%, MCC 0.472
+Pathologist 3: accuracy 71.0%, MCC 0.423
+Interobserver agreement (κ): 0.176–0.409
+
+5. Intended Use
+This model is intended for:
+Diagnostic support and triage in challenging MM vs PBL cases
+Reduction of interobserver variability
+Research and educational applications in computational pathology
+Morphological exploration via explainable AI tools
+Not intended for autonomous clinical diagnosis.
+
+6. Limitations
+Moderate cohort size due to disease rarity
+Lack of molecular and immunophenotypic integration
+Patch-based inference may miss global architectural context
+Grad-CAM provides indirect approximations of human reasoning
+
+7. Potential Biases
+Geographic and institutional staining variability
+ROI-based sampling bias
+Class balance maintained at patient level only
+
+8. Ethical & Responsible AI Considerations
+Data anonymisation and ethical approvals obtained
+Explainability incorporated to enhance transparency
+Outputs are assistive and must be interpreted by trained professionals
+Further prospective multicentre validation is required
