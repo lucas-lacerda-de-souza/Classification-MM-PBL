@@ -112,4 +112,4 @@ Synthetic demo data and example patches are provided for testing and inference.
 Full implementation available at: https://github.com/lucas-lacerda-de-souza/Classification-MM-PBL
 
 - Model Weights
-Trained models, segmentation weights, and multimodal checkpoints are publicly available via Zenodo (link provided in the repository).
+Trained models, segmentation weights, and multimodal checkpoints are publicly available via Zenodo (https://doi.org/10.5281/zenodo.17988749).
