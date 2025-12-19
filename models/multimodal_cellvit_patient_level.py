@@ -5,10 +5,11 @@ Author: Lucas Lacerda de Souza
 
 Description: 
 This script implements a multimodal deep learning pipeline that integrates histopathological image patches, clinicopathologic and nuclear morphometric features 
-to classify plasma cell lesions into Multiple Myeloma (MM – Class 1) and Plasmablastic Lymphoma (PBL – Class 2). The model uses CellVit for feature extraction from 
-image patches, combines it with a clinical/nuclear feature MLP, and evaluates at both patch-level and patient-level using ROC AUC, calibration curves, confusion 
-matrices, and bootstrapped confidence intervals. 
+to classify plasma cell lesions into Multiple Myeloma (MM – Class 1) and Plasmablastic Lymphoma (PBL – Class 2). 
 
+The model is based on a CellViT (Vision Transformer) backbone for image embeddings, combined with a fully-connected network for clinical and nuclear 
+morphometric data.
+    
 Dependencies: 
 torch>=2.1.0 
 torchvision>=0.16.0 
