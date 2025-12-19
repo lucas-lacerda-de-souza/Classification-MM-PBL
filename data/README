@@ -22,26 +22,6 @@ the multimodal experiments combining morphometric, clinical, and deep learning d
 │   ├── wsi_enktclnt_1.png
 │   └── wsi_enktclnt_2.png
 │   │
-│   ├── masks/
-│   │   ├── train/
-│   │   │   ├── Case_1/mask.png
-│   │   │   ├── Case_2/mask.png
-│   │   │   ├── Case_3/mask.png
-│   │   │   ├── Case_4/mask.png
-│   │   │   └── Case_5/mask.png
-│   │   ├── val/
-│   │   │   ├── Case_1/mask.png
-│   │   │   ├── Case_2/mask.png
-│   │   │   ├── Case_3/mask.png
-│   │   │   ├── Case_4/mask.png
-│   │   │   └── Case_5/mask.png
-│   │   └── test/
-│   │       ├── Case_1/mask.png
-│   │       ├── Case_2/mask.png
-│   │       ├── Case_3/mask.png
-│   │       ├── Case_4/mask.png
-│   │       └── Case_5/mask.png
-│   │
 │   └── patches/
 │       ├── train/
 │       │   ├── Case_1/patch.png
