@@ -4,8 +4,8 @@ Multimodal AlexNet Classifier for MM and PBL
 Author: Lucas Lacerda de Souza
 
 Description:
-    This script implements a multimodal deep learning pipeline for the histopathologic classification of Multiple Myeloma (MM – Class 1) 
-    and Plasmablastic Lymphoma (PBL – Class 2).
+    This script implements a multimodal deep learning pipeline designed for the histopathologic classification of head and neck plasma cell neoplasms,
+    specifically Multiple Myeloma (MM – Class 1) and Plasmablastic Lymphoma (PBL – Class 2).
 
     The architecture integrates embeddings extracted from histopathological image patches using an AlexNet backbone with clinicopathologic 
     and nuclear morphometric features processed through a fully connected MLP. The combined multimodal representation is used to perform both 
