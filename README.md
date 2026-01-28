@@ -7,13 +7,14 @@ ________________________________________
 **1. Project Overview**
 
 This study proposes an explainable multimodal deep learning framework to distinguish multiple myeloma from plasmablastic lymphoma by integrating three complementary data streams: 
-(I) histopathological image patches analysed using established convolutional neural network architectures (AlexNet, ResNet50, DenseNet121, InceptionV3) and a transformer-based model (CellViT); 
+(I) histopathological image patches analysed using established convolutional neural network architectures (AlexNet, ResNet50, DenseNet121, InceptionV3) and a transformer-based model (CellViT++); 
 (II) structured clinicopathological variables; and (III) quantitative nuclear morphometric features modelled using gradient-boosting classifiers. Model interpretability is incorporated through 
 Grad-CAM visualisation for image-based predictions and SHAP-based feature attribution, aiming to support diagnostic decision-making in challenging plasma-cell neoplasms.
 ________________________________________
 **2. Pipeline**
 
-<img width="2000" height="1155" alt="Figure 2" src="https://github.com/user-attachments/assets/b98c33fa-c12d-4f0b-bd9e-1ac8d21db3f1" />
+<img width="957" height="1143" alt="Figure 2" src="https://github.com/user-attachments/assets/03c6505b-010e-4dc8-8536-15485eafebfc" />
+
 
 ________________________________________
 
@@ -83,7 +84,7 @@ ________________________________________
 
   • InceptionV3 with Multilayer Perceptron (MLP) fusion
 
-  • CellViT with Multilayer Perceptron (MLP) fusion
+  • CellViT++ with Multilayer Perceptron (MLP) fusion
 
   • Grad-CAM (Gradient-weighted Class Activation Mapping)
 ________________________________________
@@ -113,7 +114,7 @@ Model performance was measured using loss, accuracy, precision, recall, confusio
 •	InceptionV3 (multimodal deep learning)
 Evaluation metrics comprised loss, accuracy, precision, recall, confusion matrix components (TP, FN, FP, TN), F1-score, specificity, ROC AUC, and Cohen’s kappa coefficient.
 
-•	CellViT (multimodal deep learning)
+•	CellViT++ (multimodal deep learning)
 Performance assessment included loss, accuracy, precision, recall, confusion matrix components (TP, FN, FP, TN), F1-score, specificity, ROC AUC, and Cohen’s kappa coefficient, with additional emphasis on probability calibration using the Expected Calibration Error (ECE) and Brier score.
 
 •	Patient-level evaluation (all multimodal models)
